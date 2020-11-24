@@ -34,7 +34,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Git Creation Demo
-        uses: bryannice/gitactions-git-issue-creation@2.1.0
+        uses: JasonEtco/create-an-issue@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_COMMIT_SHA: ${{ github.sha }}
