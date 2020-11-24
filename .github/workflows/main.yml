@@ -34,7 +34,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Git Creation Demo
-        uses: lekhika13/hackathon@master
+        uses: bryannice/gitactions-git-issue-creation@2.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           GITHUB_COMMIT_SHA: ${{ github.sha }}
