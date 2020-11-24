@@ -39,7 +39,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           GITHUB_COMMIT_SHA: ${{ github.sha }}
           # GITHUB_REPO_OWNER: 'lekhika13'
-          # GITHUB_OWNER: 'lekhika13'
+          GITHUB_OWNER: 'lekhika13'
           GITHUB_REPOSITORY: 'hackathon'
           GITHUB_ISSUE_TITLE: 'Facing issue with Divide Error'
           GITHUB_ISSUE_BODY: 'PLease check'
