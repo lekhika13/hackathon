@@ -1,0 +1,12 @@
+name: 'Git Issue Creation'
+description: 'Git issue created by Git Actions'
+author: 'Bryan Nice'
+branding:
+  icon: 'message-square'
+  color: 'purple'
+outputs:
+  git_issue_url:
+    description: 'Url to the git issue created'
+runs:
+  using: 'docker'
+  image: 'docker://bryannice/gitactions-git-issue-creation:2.1.0'
