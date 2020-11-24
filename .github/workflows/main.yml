@@ -1,0 +1,44 @@
+name: Deploy ASP.NET MVC App deploy to Azure Web App
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+env:
+  AZURE_WEBAPP_FRONTEND: 'contoso-webapp'
+  AZURE_WEBAPP_NAME: 'contoso-api'    # set this to your application's name
+  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
+  DOTNET_VERSION: '3.1' 
+  working-directory: ./src/Contoso.WebApi        # set this to the dot net version to use
+  working-directory-frontend: ./src/Contoso.Web
+
+jobs:
+  build:
+    name: Hello world action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./action-a
+        with:
+          MY_NAME: "Lekhika"
+
+      - name: divide error
+        run: echo ${1/0}
+        
+  gitIssueCreation:
+    name: Git Creation Demo
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Git Creation Demo
+        uses: bryannice/gitactions-git-issue-creation@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_COMMIT_SHA: ${{ github.sha }}
+          GITHUB_REPO_OWNER: 'lekhika13'
+          GITHUB_REPO_NAME: 'hackathon'
+          GITHUB_ISSUE_TITLE: 'Facing issue with Divide Error'
+          GITHUB_ISSUE_BODY: 'PLease check'
