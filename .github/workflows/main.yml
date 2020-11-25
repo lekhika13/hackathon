@@ -38,4 +38,16 @@ jobs:
           GITHUB_REPOSITORY: 'hackathon'
           GITHUB_ISSUE_TITLE: 'Facing issue with Divide Error'
           GITHUB_ISSUE_BODY: 'PLease check'
-  
+      - name: Update npm packages
+        uses: technote-space/create-pr-action@v2
+        with:
+          # EXECUTE_COMMANDS: |
+          #   npx npm-check-updates -u --packageFile package.json
+          #   yarn install
+          #   yarn upgrade
+          #   yarn audit
+          COMMIT_MESSAGE: 'chore: update npm dependencies'
+          COMMIT_NAME: 'GitHub Actions'
+          COMMIT_EMAIL: 'example@example.com'
+          PR_BRANCH_NAME: 'chore-npm-update-${PR_ID}'
+          PR_TITLE: 'chore: update npm dependencies'
