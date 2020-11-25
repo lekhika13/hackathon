@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - master
+      - feature
 env:
   AZURE_WEBAPP_FRONTEND: 'contoso-webapp'
   AZURE_WEBAPP_NAME: 'contoso-api'    # set this to your application's name
@@ -27,17 +28,17 @@ jobs:
     name: Git Creation Demo
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: Git Creation Demo
-        uses: JasonEtco/create-an-issue@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_COMMIT_SHA: ${{ github.sha }}
-          # GITHUB_REPO_OWNER: 'lekhika13'
-          GITHUB_OWNER: 'lekhika13'
-          GITHUB_REPOSITORY: 'hackathon'
-          GITHUB_ISSUE_TITLE: 'Facing issue with Divide Error'
-          GITHUB_ISSUE_BODY: 'PLease check'
+      # - uses: actions/checkout@master
+      # - name: Git Creation Demo
+      #   uses: JasonEtco/create-an-issue@v2
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     GITHUB_COMMIT_SHA: ${{ github.sha }}
+      #     # GITHUB_REPO_OWNER: 'lekhika13'
+      #     GITHUB_OWNER: 'lekhika13'
+      #     GITHUB_REPOSITORY: 'hackathon'
+      #     GITHUB_ISSUE_TITLE: 'Facing issue with Divide Error'
+      #     GITHUB_ISSUE_BODY: 'PLease check'
       - name: Update npm packages
         uses: technote-space/create-pr-action@v2
         with:
