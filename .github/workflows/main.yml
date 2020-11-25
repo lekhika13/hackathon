@@ -49,5 +49,5 @@ jobs:
           COMMIT_MESSAGE: 'chore: update npm dependencies'
           COMMIT_NAME: 'GitHub Actions'
           COMMIT_EMAIL: 'example@example.com'
-          PR_BRANCH_NAME: 'chore-npm-update-${PR_ID}'
+          PR_BRANCH_NAME: 'feature-${PR_ID}'
           PR_TITLE: 'chore: update npm dependencies'
