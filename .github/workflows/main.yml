@@ -3,10 +3,11 @@ name: Deploy ASP.NET MVC App deploy to Azure Web App
 on:
   push:
     branches:
-      - master
+      - feature
   pull_request:
     branches:
       - master
+      - feature
 env:
   AZURE_WEBAPP_FRONTEND: 'contoso-webapp'
   AZURE_WEBAPP_NAME: 'contoso-api'    # set this to your application's name
